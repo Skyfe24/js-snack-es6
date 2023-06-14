@@ -49,5 +49,11 @@ squadre.forEach((squadra) =>{
 
 });
 
-const squadreFinal = squadre.map(nome , falliSubiti)
-console.log(squadreFinal);
+let result = '';
+for (let i = 0; i < squadre.length; i++) {
+    const squadra = squadre[i];
+    result  += squadra.nome.falliSubiti;
+
+
+    console.table(result);
+}
