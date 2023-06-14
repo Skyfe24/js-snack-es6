@@ -46,5 +46,7 @@ for (let i = 0; i < squadre.length; i++) {
   const thisTeam = squadre[i];
   const { nome, falliSubiti } = thisTeam;
 
-  console.log(thisTeam);
+
+  const result = ['nome del team:' + nome,'falli subiti:'+ falliSubiti]
+  console.log(result);
 }
