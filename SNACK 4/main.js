@@ -43,8 +43,8 @@ squadre.forEach((squadra) => {
 
 thisTeam= '';
 for (let i = 0; i < squadre.length; i++) {
-  const thisteam = squadre[i];
-  const { nome, falli_subiti } = thisTeam;
+  const thisTeam = squadre[i];
+  const { nome, falliSubiti } = thisTeam;
 
   console.log(thisTeam);
 }
