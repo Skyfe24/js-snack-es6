@@ -5,10 +5,6 @@ console.log("js ok");
 // Generare numeri random al posto degli 0 nelle proprietà punti fatti e falli subiti.
 // Infine, usando il destructuring, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
-
-
-
-
 const squadre = [
   {
     nome: "Bluteam",
@@ -28,32 +24,27 @@ const squadre = [
 ];
 console.log(squadre);
 
+const getRandomNumber = () => {
+  let randomNumber;
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+  return randomNumber;
+};
 
-const getRandomNumber = (() => {
-    let randomNumber;
-    randomNumber = Math.floor(Math.random() * 100 ) +1
-    return randomNumber;
+const getRandomNumber2 = () => {
+  let randomNumber;
+  randomNumber = Math.floor(Math.random() * 10) + 1;
+  return randomNumber;
+};
+
+squadre.forEach((squadra) => {
+  squadra.puntiFatti = getRandomNumber();
+  squadra.falliSubiti = getRandomNumber2();
 });
 
-const getRandomNumber2 = (() => {
-    let randomNumber;
-    randomNumber = Math.floor(Math.random() * 10 ) +1
-    return randomNumber;
-});
-
-
-squadre.forEach((squadra) =>{ 
-
-    squadra.puntiFatti = getRandomNumber();
-    squadra.falliSubiti = getRandomNumber2();
-
-});
-
-let result = '';
+thisTeam= '';
 for (let i = 0; i < squadre.length; i++) {
-    const squadra = squadre[i];
-    result  += squadra.nome.falliSubiti;
+  const thisteam = squadre[i];
+  const { nome, falli_subiti } = thisTeam;
 
-
-    console.table(result);
+  console.log(thisTeam);
 }
